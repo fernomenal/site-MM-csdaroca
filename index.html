@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Time de CS2</title>
+    <style>
+        .team-list li {
+            visibility: hidden; /* Torna os nomes invisíveis */
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-icon" onclick="toggleMenu(event)">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="menu-content" id="menuContent">            
+            <div class="registration-container">
+                <h2>Cadastro</h2>
+                <form id="registrationForm" onsubmit="registerUser(event)">
+                    <label for="username">Digite seu nome:</label>
+                    <input type="text" id="username" placeholder="Seu nome" required />
+                    <button type="submit">Entrar</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="user-display">
+        <span id="userDisplayName">Visitante</span>
+    </div>
+
+    <div class="logo-container">
+        <img src="ad.png" alt="Logo do Time de CS2">
+        <p class="line-text">O melhor site de mix de CS2</p>
+    </div>
+
+    <div class="teams-container">
+        <div class="team" id="team1">
+            <h2 class="team-name">
+                <span id="team1Error" class="error-message hidden">deve conter entre 2 e 15 caracteres.</span>
+                <span id="team1Name">Canalhas</span>
+                <i class="fas fa-pencil-alt edit-icon" onclick="editTeamName('team1')"></i>
+                <input type="text" id="team1Input" class="edit-input hidden" 
+                       onblur="saveTeamName('team1')" 
+                       onkeydown="handleKeyPress(event, 'team1')" />
+            </h2>
+            <ul class="team-list">
+            </ul>
+        </div> 
+
+        <div class="team" id="team2">
+            <h2 class="team-name">
+                <span id="team2Error" class="error-message hidden">deve conter entre 2 e 15 caracteres.</span>
+                <span id="team2Name">Viados</span>
+                <i class="fas fa-pencil-alt edit-icon" onclick="editTeamName('team2')"></i>
+                <input type="text" id="team2Input" class="edit-input hidden" 
+                       onblur="saveTeamName('team2')" 
+                       onkeydown="handleKeyPress(event, 'team2')" />
+            </h2>
+            <ul class="team-list">
+            </ul>
+        </div>
+    </div>
+
+    <div class="buttons-container">
+        <button onclick="swapTeams()">Trocar</button>
+    </div>
+
+    <div class="start-container">
+        <button class="start-button">
+            Iniciar Partida
+        </button>
+    </div>
+
+    <div class="exit-container">
+        <button class="exit-button" onclick="leaveTeam()">
+            <i class="fas fa-door-open"></i> Sair do Time
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Impede o scroll horizontal */
+}
+
+.content {
+    padding: 20px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.logo-container::after {
+    content: ""; /* Adiciona uma linha decorativa */
+    display: block;
+    width: 40%; /* Define a largura da linha */
+    height: 2px; /* Espessura da linha */
+    background-color: #ccc; /* Cor da linha */
+    margin: 10px auto; /* Centraliza a linha e adiciona espaçamento */
+}
+
+.logo-container img {
+    max-width: 220px; /* Ajuste o tamanho da logo */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+.tagline {
+    text-align: center;
+    font-size: 18px; /* Tamanho da fonte */
+    color: #555; /* Cor do texto */
+    margin-top: 15px; /* Espaçamento entre a linha e o texto */
+    font-weight: 400; /* Peso da fonte */
+    font-family: Arial, sans-serif; /* Fonte */
+}
+
+.line-text {
+    text-align: center;
+    font-size: 18px; /* Tamanho da fonte */
+    color: #555; /* Cor do texto */
+    margin-top: 15px; /* Espaçamento entre a linha e o texto */
+    font-weight: 400; /* Peso da fonte */
+    font-family: Arial, sans-serif; /* Fonte */
+    position: relative;
+    top: 10px; /* Garante que o texto fique abaixo da linha */
+}
+
+.menu-container {
+    position: relative;
+    color: rgb(0, 0, 0);
+    padding: 0px;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Espaçamento entre as linhas */
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 1001; /* Garante que o menu hambúrguer esteja acima de outros elementos */
+}
+
+.menu-icon .line {
+    width: 25px; /* Largura das linhas */
+    height: 4px; /* Altura das linhas */
+    margin: 1px 0;
+    background-color: rgb(27, 25, 25); /* Cor das linhas */
+    border-radius: 7px; /* Arredonda as extremidades das linhas */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+.menu-icon.active .line {
+    opacity: 0; /* Torna as linhas invisíveis */
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.menu-content {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Esconde o menu fora da tela */
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
+    color: black;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease; /* Animação suave para abrir/fechar */
+    z-index: 1000;
+    pointer-events: none; /* Desativa cliques no menu quando ele está escondido */
+}
+
+.menu-content a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.menu-content a:hover {
+    color: #ddd; /* Muda a cor ao passar o mouse */
+}
+
+.menu-content.open {
+    left: 0; /* Move o menu para dentro da tela */
+    pointer-events: auto; /* Permite cliques no menu quando ele está aberto */
+}
+
+.menu-icon:hover {
+    background-color: #ffffff; /* Muda a cor do fundo ao passar o mouse */
+    color: #393737; /* Muda a cor do ícone ao passar o mouse */
+}
+
+.menu-icon:hover .line {
+    background-color: #555; /* Muda a cor das linhas ao passar o mouse */
+}
+
+.teams-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Alinha os itens verticalmente */
+    position: relative; /* Define o contexto para posicionamento absoluto */
+}
+
+.team {
+    text-align: center;
+    width: 35%; /* Aumenta a largura da caixa */
+    height: 450px; /* Define uma altura fixa */
+    border: 1px solid #ccc;
+    padding: 20px; /* Adiciona mais espaço interno */
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+.team-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    cursor: text; /* Permite editar o nome */
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+}
+
+.team-list li { 
+    margin: 5px 0;
+    font-size: 18px;
+    color: #000; /* Define a cor do texto como preto */
+}
+
+
+
+.swap-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.buttons-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #818181; /* Borda cinza */
+    background-color: #ffffff;
+    color: rgb(101, 101, 101);
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Ajuste a margem superior */
+}
+
+button:hover {
+    background-color: #555555;
+    color: #ffffff; /* Texto branco ao passar o mouse */
+}
+
+.registration-container {
+    margin: 20px auto; /* Centraliza horizontalmente e adiciona margem superior */
+    text-align: center;
+    width: 100%; /* Garante que a largura seja relativa ao contêiner pai */
+    max-width: 400px; /* Define um limite máximo de largura */
+    padding: 20px; /* Adiciona espaçamento interno */
+    border: 1px solid #ccc; /* Adiciona uma borda */
+    border-radius: 10px; /* Arredonda os cantos */
+    background-color: #f9f9f9; /* Fundo claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+.registration-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.registration-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre os campos */
+}
+
+.registration-container input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Garante que o campo ocupe toda a largura */
+    box-sizing: border-box; /* Inclui padding no tamanho total */
+}
+
+.registration-container button {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.registration-container button:hover {
+    background-color: #0056b3;
+}
+
+.user-display {
+    position: absolute;
+    top: 100px;
+    right: 250px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.hidden {
+    display: none; /* Oculta o campo de entrada */
+}
+
+.edit-input {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.edit-icon:hover {
+    color: #000;
+}
+
+.hidden .edit-icon {
+    display: inline; /* Garante que o ícone seja exibido */
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 5px; /* Espaçamento abaixo da mensagem */
+    display: none; /* Esconde a mensagem inicialmente */
+}
+
+.error-message.visible {
+    display: block; /* Exibe a mensagem quando necessário */
+}
+
+.exit-container {
+    text-align: center;
+    margin-top: 0px;
+    
+}
+
+.exit-button {
+    align-items: center; 
+    position: relative;
+    top: -69px;
+    left: -100px;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: semi-bold;
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.exit-button i {
+    font-size: 18px;
+}
+
+.exit-button:hover {
+    background-color: red;
+    color: white;
+}
+
+.start-container {
+    text-align: center;
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.start-button {
+    padding: 10px 20px;
+    position: relative;
+    font-size: 16px;
+    top: -10px;
+    right: -100px;
+    font-weight: semi-bold;
+    color: white; /* Texto branco */
+    background-color: #28a745; /* Fundo verde */
+    border: px solid #28a745; /* Borda verde */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #218838; /* Fundo verde mais escuro ao passar o mouse */
+    border-color: #218838; /* Borda verde mais escura */
+}
+
+
+
+
