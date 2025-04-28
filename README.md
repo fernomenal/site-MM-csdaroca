@@ -1,4 +1,4 @@
-# **Documento para o Projeto: Site de Times de CS2**
+# Documento para o Projeto: Site de Times de CS2
 
 ### **1. Visão Geral do Projeto**
 
@@ -66,6 +66,8 @@ O projeto utiliza as seguintes linguagens e tecnologias:
 - **Font Awesome**: Para ícones, como o lápis de edição e o botão de sair.
 
 ### **7. Arquivo HTML (index.html)**
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -156,7 +158,11 @@ O projeto utiliza as seguintes linguagens e tecnologias:
     <script src="script.js"></script>
 </body>
 </html>
-8. Arquivo CSS (style.css)
+```
+
+### **8. Arquivo CSS (style.css)**
+
+```css
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -322,8 +328,6 @@ body {
     font-size: 18px;
     color: #000; /* Define a cor do texto como preto */
 }
-
-
 
 .swap-button:hover {
     background-color: #0056b3;
@@ -505,7 +509,11 @@ button:hover {
     background-color: #218838; /* Fundo verde mais escuro ao passar o mouse */
     border-color: #218838; /* Borda verde mais escura */
 }
-9. Arquivo JAVA (script.js)
+```
+
+### **9. Arquivo JAVA (script.js)**
+
+```jsx
 function toggleMenu(event) {
     event.stopPropagation(); // Impede que o clique no menu-icon feche o menu
     const menu = document.getElementById("menuContent");
@@ -724,6 +732,8 @@ function leaveTeam() {
         alert("Você não está em nenhum time.");
     }
 }
+```
+
 ### Conclusão
 
 O projeto do **Site de Times de CS2** foi desenvolvido com o objetivo de criar uma plataforma interativa para gerenciar times de jogadores. Utilizando **HTML**, **CSS** e **JavaScript**, o site oferece funcionalidades como cadastro de jogadores, gerenciamento de times, edição de nomes, troca de jogadores e início de partidas.
