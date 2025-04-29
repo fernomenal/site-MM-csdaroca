@@ -1,4 +1,4 @@
-# Documento para o Projeto: Site de Times de CS2
+# Documento para o Projeto
 
 ### **1. Visão Geral do Projeto**
 
