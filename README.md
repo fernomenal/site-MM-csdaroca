@@ -6,7 +6,7 @@ O objetivo do projeto é criar um site interativo para gerenciar times de CS2 (C
 
 **2. Stakeholders**
 
-- **Equipe de Desenvolvimento**: Desenvolvedores front-end e back-end.
+- **Equipe de Desenvolvimento**: Desenvolvedor front-end e back-end.
 - **Usuários Finais**: Jogadores de CS2 que usarão o site para organizar partidas.
 
 ### **3. Backlog do Produto**
